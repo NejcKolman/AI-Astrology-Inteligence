@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JEZIKI</title>
+    </head>
+    <body>
+        <button> <a href="#en" data-reload>english</a></button>
+        <button> <a href="#sl" data-reload>slovenščina</a></button>
+
+        <button class="buttonEn">EN</button>
+        <button class="buttonSl">SL</button>
+        <div id="pozdrav">
+            HELLO
+        </div>
+        <script>
+            const buttonEnElement=document.querySelector('.buttonEn')
+            buttonEnElement.addEventListener('click',()=>
+                {window.location.hash='#en';
+                location.reload(); 
+                })
+            const buttonSlElement=document.querySelector('.buttonSl')
+            buttonSlElement.addEventListener('click',()=>
+                {window.location.hash='#sl';
+                location.reload();  
+                })
+
+
+
+
+
+            let language ={
+                en:{
+                    statement1: "HELLO"
+                },
+                sl:{
+                    statement1:"ŽIVIJO"
+                }
+            };
+            
+            if (window.location.hash === '#sl'){
+                pozdrav.textContent=language.sl.statement1;
+                console.log('hello')
+                console.log(document.getElementById('buttonEn'))
+                $('buttonEn').addClass('buttonEnSlSelected');
+                $('buttonSl').removeClass('buttonEnSlSelected')
+                
+                } else {
+                  pozdrav.textContent=language.en.statement1;
+                  $('buttonSl').addClass('buttonEnSlSelected');
+                  $('buttonEn').removeClass('buttonEnSlSelected');
+                }
+            
+            
+                    
+/*
+            for (i =0; i <= dataReload.length; i++){
+                dataReload[i].onclick=function(){
+                    location.reload(true);
+                }
+            }
+                */
+        </script>
+
+    </body>
+</html>

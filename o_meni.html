@@ -8,8 +8,8 @@
 
 
     <body>
-        <!--HEADER START-->
-        <div style="position:fixed; top:0; left:0; right:0;background-color: white;">
+         <!--HEADER START-->
+         <div style="position:fixed; top:0; left:0; right:0;background-color: white;">
             <div class="header1">
                 <div class="mail-info">
                 <div class="mail-icon">
@@ -38,9 +38,13 @@
                         <img class="location-icon" src="slike/location-icon">
                     </div>
                     <div class="location-info-text">
-                        Slovenska cesta 1, 1000 Ljubljana
+                        Slovenska cesta 1, 1000 Ljubljana, Slovenija
                     </div>
                     
+                </div>
+                <div>
+                    <button id= 'buttonEn' class="buttonEn">EN</button>
+                    <button id= 'buttonSl' class="buttonSl">SL</button>
                 </div>
             </div>
                 
@@ -65,32 +69,32 @@
                 </div>
                 <div class="storitve">
                     <a href="storitve.html">
-                        <button class="button">
-                            STORITVE
+                        <button id='storitve' class="button">
+                            SERVICES
                         </button>
                     </a>
                 </div>
                 
                 <div class="o-meni">
                     <a href="o_meni.html">
-                        <button class="button">
-                            O MENI
+                        <button id='oMeni' class="button">
+                            ABOUT ME
                         </button>
                     </a>    
                 </div>
                 
                 <div class="kontakt">
                     <a href="kontakt.html">
-                        <button class="button">
-                            KONTAKT
+                        <button id='kontakt' class="button">
+                            CONTACT
                         </button>
                     </a>
                 </div>
                 
                 <div class="poučni-članki">
                     <a href="poučni_članki.html">
-                        <button class="button">
-                            POUČNI ČLANKI
+                        <button id='poučniČlanki' class="button">
+                            EDUCATIONAL ARTICLES
                         </button>
                     </a>
                 </div>
@@ -102,13 +106,12 @@
         <!--HEADER END-->
         
         <div style="padding-top: 150px;">
-            <div>
-                O MENI
+            <div id="prvaStran">
+                FIRST PAGE
             </div>    
 
         </div>
-
-        
+        <script src="prevodi.js"></script>
     </body>
 </html>
 
