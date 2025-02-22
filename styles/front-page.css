@@ -1,6 +1,23 @@
-body{
-    margin-top:0;
-    margin-bottom: 5000px;
-    font-family:droid-serif,serif;
-    background-color:rgb(224, 221, 207);
+body {
+  margin-top: 0;
+  margin-bottom: 5000px;
+  font-family: droid-serif, serif;
+  background-color: rgb(224, 221, 207);
+}
+.firstPageAppointmentButton {
+  background-color: rgb(116, 144, 115);
+  color: white;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 100px;
+}
+.firstPageAppointmentButtonDiv1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.uvodVRezervacijo {
+  padding-top: 150px;
+  text-align: center;
 }
