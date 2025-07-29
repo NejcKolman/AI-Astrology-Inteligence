@@ -46,3 +46,36 @@
   color: transparent;
   border: none;
 }
+#articlesMenu {
+  padding-top: 150px;
+}
+/* 
+#menu_button {
+  display: none;
+  padding-top: 250px;
+}
+
+
+
+@media (max-width: 1000px) {
+  #menu_button {
+    display: block;
+  }
+
+  #articlesMenu {
+    padding-top: 10px;
+    display: none;
+  }
+  #tableOfArticles {
+    padding-top: 10px;
+    display: none;
+  }
+  #tableOfArticles.active {
+    padding-top: 10px;
+    display: flex;
+  }
+  #articlesMenu.active {
+    display: block;
+  }
+}
+*/

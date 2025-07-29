@@ -1,4 +1,4 @@
-<div style="position: fixed; top: 0; left: 0; right: 0; background-color: white">
+<div id="headerOnDesktop" style="position: fixed; top: 0; left: 0; right: 0; background-color: white">
   <div class="header1">
     <div class="mail-info">
       <div class="mail-icon">
@@ -19,13 +19,17 @@
       <div class="location-icon">
         <img class="location-icon" src="slike/location-icon" />
       </div>
-      <div class="location-info-text">Slovenska cesta 1, 1000 Ljubljana</div>
+      <div class="location-info-text">Slovenska cesta 1, 1000 Ljubljana, Slovenija</div>
+    </div>
+    <div>
+      <button id="buttonEn" class="buttonEn">EN</button>
+      <button id="buttonSl" class="buttonSl">SL</button>
     </div>
   </div>
 
   <div class="header2">
     <div class="naslov-outer">
-      <a style="text-decoration: none" href="/index.html">
+      <a style="text-decoration: none" href="index.html">
         <div class="naslov-inner">
           <div class="AI-icon">
             <img class="AI-icon" src="slike/AI-icon" />
@@ -38,27 +42,115 @@
       </a>
     </div>
     <div class="storitve">
-      <a href="/storitve.html">
-        <button class="button">STORITVE</button>
+      <a href="storitve.html">
+        <button id="storitve" class="button">SERVICES</button>
+      </a>
+    </div>
+    <div class="storitve2">
+      <a href="storitve2.html">
+        <button id="storitve2" class="button">SERVICES2</button>
       </a>
     </div>
 
     <div class="o-meni">
-      <a href="/o_meni.html">
-        <button class="button">O MENI</button>
+      <a href="o_meni.html">
+        <button id="oMeni" class="button">ABOUT ME</button>
       </a>
     </div>
 
     <div class="kontakt">
-      <a href="/kontakt.html">
-        <button class="button">KONTAKT</button>
+      <a href="kontakt.html">
+        <button id="kontakt" class="button">CONTACT</button>
       </a>
     </div>
 
     <div class="poučni-članki">
-      <a href="/poučni_članki.html">
-        <button class="button">POUČNI ČLANKI</button>
+      <a href="poučni_članki.html">
+        <button id="poučniČlanki" class="button">EDUCATIONAL ARTICLES</button>
       </a>
     </div>
   </div>
 </div>
+<!--HERE THE MOBILE HEADER STARTS-->
+<div id="headerOnMobile">
+  <div class="header3">
+    <div class="naslov-outer">
+      <a style="text-decoration: none" href="index.html">
+        <div class="naslov-innerMobile">
+          <div class="AI-iconMobile">
+            <img class="AI-iconMobile" src="slike/AI-icon" />
+          </div>
+          <div class="naslov-textMobile">
+            <div class="ime-za-naslovMobile">ANDREJ KOCJANČIČ</div>
+            <div class="astrology-inteligence-za-naslovMobile">ASTROLOGY INTELIGENCE</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <button id="mobileMenuButton" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="header4">
+    <div>
+      <button id="buttonEnMobile" class="buttonEnMobile">EN</button>
+      <button id="buttonSlMobile" class="buttonSlMobile">SL</button>
+      <button id="toggleMenuX" onclick="toggleMenu()">X</button>
+    </div>
+
+    <div class="storitveMobile">
+      <a href="storitve.html">
+        <button id="storitveMobile" class="buttonMobile">SERVICES</button>
+      </a>
+    </div>
+    <div class="storitve2Mobile">
+      <a href="storitve2.html">
+        <button id="storitve2Mobile" class="buttonMobile">SERVICES2</button>
+      </a>
+    </div>
+
+    <div class="o-meniMobile">
+      <a href="o_meni.html">
+        <button id="oMeniMobile" class="buttonMobile">ABOUT ME</button>
+      </a>
+    </div>
+
+    <div class="kontaktMobile">
+      <a href="kontakt.html">
+        <button id="kontaktMobile" class="buttonMobile">CONTACT</button>
+      </a>
+    </div>
+
+    <div class="poučni-člankiMobile">
+      <a href="poučni_članki.html">
+        <button id="poučniČlankiMobile" class="buttonMobile">EDUCATIONAL ARTICLES</button>
+      </a>
+    </div>
+    <div class="mail-infoMobile">
+      <div class="mail-iconMobile">
+        <img class="mail-iconMobile" src="slike/mail-icon" />
+      </div>
+
+      <div class="mail-info-textMobile">andrej.kocjancic@gmail.com</div>
+    </div>
+
+    <div class="telephone-infoMobile">
+      <div class="telephone-iconMobile">
+        <img class="telephone-iconMobile" src="slike/telephone-icon" />
+      </div>
+      <div class="telephone-info-textMobile">+386 (0)12 345 678</div>
+    </div>
+
+    <div class="location-infoMobile">
+      <div class="location-iconMobile">
+        <img class="location-iconMobile" src="slike/location-icon" />
+      </div>
+      <div class="location-info-textMobile">Slovenska cesta 1, 1000 Ljubljana, Slovenija</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    console.log("click");
+    document.getElementById("header4").classList.toggle("active");
+  }
+</script>

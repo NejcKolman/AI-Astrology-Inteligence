@@ -7,12 +7,27 @@ if (localStorage.getItem("jezik") == "#sl") {
 
 const buttonEnElement = document.querySelector(".buttonEn");
 buttonEnElement.addEventListener("click", () => {
+  console.log("lan");
   window.location.hash = "#en";
   localStorage.setItem("jezik", "#en");
   location.reload();
 });
 const buttonSlElement = document.querySelector(".buttonSl");
 buttonSlElement.addEventListener("click", () => {
+  window.location.hash = "#sl";
+  localStorage.setItem("jezik", "#sl");
+  location.reload();
+});
+//enako za mobile
+const buttonEnElementMobile = document.querySelector(".buttonEnMobile");
+buttonEnElementMobile.addEventListener("click", () => {
+  console.log("ln");
+  window.location.hash = "#en";
+  localStorage.setItem("jezik", "#en");
+  location.reload();
+});
+const buttonSlElementMobile = document.querySelector(".buttonSlMobile");
+buttonSlElementMobile.addEventListener("click", () => {
   window.location.hash = "#sl";
   localStorage.setItem("jezik", "#sl");
   location.reload();
@@ -61,15 +76,22 @@ let language = {
 };
 //poglej hash in spremeni besedilo, označi gumbe za izbiro jezika pravilno
 for (let textElement in language.sl) {
-  if (document.getElementById(textElement) == null) {
+  if (document.getElementById(textElement + "Mobile") == null) {
     continue;
   }
   if (window.location.hash === "#sl") {
     eval(textElement).textContent = language.sl[textElement];
+    eval(textElement + "Mobile").textContent = language.sl[textElement];
+
     document.getElementById("buttonSl").classList.add("buttonEnSlSelected");
     document.getElementById("buttonEn").classList.remove("buttonEnSlSelected");
+    document.getElementById("buttonSlMobile").classList.add("buttonEnSlSelected");
+    document.getElementById("buttonEnMobile").classList.remove("buttonEnSlSelected");
   } else {
     eval(textElement).textContent = language.en[textElement];
+    eval(textElement + "Mobile").textContent = language.en[textElement];
+    document.getElementById("buttonEnMobile").classList.add("buttonEnSlSelected");
+    document.getElementById("buttonSlMobile").classList.remove("buttonEnSlSelected");
     document.getElementById("buttonEn").classList.add("buttonEnSlSelected");
     document.getElementById("buttonSl").classList.remove("buttonEnSlSelected");
   }

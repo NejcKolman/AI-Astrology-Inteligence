@@ -160,5 +160,8 @@ adminSwitch.addEventListener("click", () => {
   }
 });
 
-//const docRef = doc(db, "articles", "2AQMPBNBGkYYNlT8Gcj3");
-//deleteDoc(docRef);
+//ZGINJEVANJE MENIJA NA DESNI NA TELEFONU
+//document.getElementById("menu_button").addEventListener("click", function () {
+//document.getElementById("articlesMenu").classList.toggle("active");
+//document.getElementById("tableOfArticles").classList.toggle("active");
+//});

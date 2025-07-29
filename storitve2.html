@@ -9,79 +9,22 @@
 
   <body>
     <!--HEADER START-->
-    <div style="position: fixed; top: 0; left: 0; right: 0; background-color: white">
-      <div class="header1">
-        <div class="mail-info">
-          <div class="mail-icon">
-            <img class="mail-icon" src="slike/mail-icon" />
-          </div>
-
-          <div class="mail-info-text">andrej.kocjancic@gmail.com</div>
-        </div>
-
-        <div class="telephone-info">
-          <div class="telephone-icon">
-            <img class="telephone-icon" src="slike/telephone-icon" />
-          </div>
-          <div class="telephone-info-text">+386 (0)12 345 678</div>
-        </div>
-
-        <div class="location-info">
-          <div class="location-icon">
-            <img class="location-icon" src="slike/location-icon" />
-          </div>
-          <div class="location-info-text">Slovenska cesta 1, 1000 Ljubljana, Slovenija</div>
-        </div>
-        <div>
-          <button id="buttonEn" class="buttonEn">EN</button>
-          <button id="buttonSl" class="buttonSl">SL</button>
-        </div>
-      </div>
-
-      <div class="header2">
-        <div class="naslov-outer">
-          <a style="text-decoration: none" href="index.html">
-            <div class="naslov-inner">
-              <div class="AI-icon">
-                <img class="AI-icon" src="slike/AI-icon" />
-              </div>
-              <div class="naslov-text">
-                <div class="ime-za-naslov">ANDREJ KOCJANČIČ</div>
-                <div class="astrology-inteligence-za-naslov">ASTROLOGY INTELIGENCE</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="storitve">
-          <a href="storitve.html">
-            <button id="storitve" class="button">SERVICES</button>
-          </a>
-        </div>
-        <div class="storitve2">
-          <a href="storitve2.html">
-            <button id="storitve2" class="button">SERVICES2</button>
-          </a>
-        </div>
-
-        <div class="o-meni">
-          <a href="o_meni.html">
-            <button id="oMeni" class="button">ABOUT ME</button>
-          </a>
-        </div>
-
-        <div class="kontakt">
-          <a href="kontakt.html">
-            <button id="kontakt" class="button">CONTACT</button>
-          </a>
-        </div>
-
-        <div class="poučni-članki">
-          <a href="poučni_članki.html">
-            <button id="poučniČlanki" class="button">EDUCATIONAL ARTICLES</button>
-          </a>
-        </div>
-      </div>
-    </div>
+    <div id="headerPlaceholder"></div>
+    <script>
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("headerPlaceholder").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "prevodi.js";
+          script.defer = true; // optional
+          document.body.appendChild(script);
+        });
+      function toggleMenu() {
+        console.log("click");
+        document.getElementById("header4").classList.toggle("active");
+      }
+    </script>
     <!--HEADER END-->
     <div class="content">
       <div class="uvodniTekstStoritve" id="uvodniTekstStoritve">Andrej offers deep astrological insights tailored to your life’s path. Whether you're curious about your own natal chart, your relationship dynamics, or seeking guidance in parenting, these readings provide clarity and perspective rooted in astrology.</div>
@@ -116,7 +59,6 @@
       </div>
     </div>
 
-    <script src="prevodi.js"></script>
     <script></script>
   </body>
 </html>
