@@ -6,32 +6,40 @@ if (localStorage.getItem("jezik") == "#sl") {
 }
 
 const buttonEnElement = document.querySelector(".buttonEn");
-buttonEnElement.addEventListener("click", () => {
-  console.log("lan");
-  window.location.hash = "#en";
-  localStorage.setItem("jezik", "#en");
-  location.reload();
-});
+if (buttonEnElement) {
+  buttonEnElement.addEventListener("click", () => {
+    console.log("lan");
+    window.location.hash = "#en";
+    localStorage.setItem("jezik", "#en");
+    location.reload();
+  });
+}
 const buttonSlElement = document.querySelector(".buttonSl");
-buttonSlElement.addEventListener("click", () => {
-  window.location.hash = "#sl";
-  localStorage.setItem("jezik", "#sl");
-  location.reload();
-});
+if (buttonSlElement) {
+  buttonSlElement.addEventListener("click", () => {
+    window.location.hash = "#sl";
+    localStorage.setItem("jezik", "#sl");
+    location.reload();
+  });
+}
 //enako za mobile
 const buttonEnElementMobile = document.querySelector(".buttonEnMobile");
-buttonEnElementMobile.addEventListener("click", () => {
-  console.log("ln");
-  window.location.hash = "#en";
-  localStorage.setItem("jezik", "#en");
-  location.reload();
-});
+if (buttonEnElementMobile) {
+  buttonEnElementMobile.addEventListener("click", () => {
+    console.log("ln");
+    window.location.hash = "#en";
+    localStorage.setItem("jezik", "#en");
+    location.reload();
+  });
+}
 const buttonSlElementMobile = document.querySelector(".buttonSlMobile");
-buttonSlElementMobile.addEventListener("click", () => {
-  window.location.hash = "#sl";
-  localStorage.setItem("jezik", "#sl");
-  location.reload();
-});
+if (buttonSlElementMobile) {
+  buttonSlElementMobile.addEventListener("click", () => {
+    window.location.hash = "#sl";
+    localStorage.setItem("jezik", "#sl");
+    location.reload();
+  });
+}
 
 //slovar besed
 let language = {
