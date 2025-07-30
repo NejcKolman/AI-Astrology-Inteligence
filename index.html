@@ -17,7 +17,7 @@
           document.getElementById("headerPlaceholder").innerHTML = data;
           const script = document.createElement("script");
           script.src = "prevodi.js";
-          script = true; // optional
+          script.defer = true; // optional
           document.body.appendChild(script);
         });
       function toggleMenu() {
