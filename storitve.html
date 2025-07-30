@@ -11,21 +11,6 @@
   <body>
     <!--HEADER START-->
     <div id="headerPlaceholder"></div>
-    <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("headerPlaceholder").innerHTML = data;
-          const script = document.createElement("script");
-          script.src = "prevodi.js";
-          script.defer = true; // optional
-          document.body.appendChild(script);
-        });
-      function toggleMenu() {
-        console.log("click");
-        document.getElementById("header4").classList.toggle("active");
-      }
-    </script>
 
     <!--HEADER END-->
 
@@ -143,5 +128,6 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script/storitve.js"></script>
+    <script src="prevodi.js"></script>
   </body>
 </html>

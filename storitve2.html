@@ -10,21 +10,7 @@
   <body>
     <!--HEADER START-->
     <div id="headerPlaceholder"></div>
-    <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("headerPlaceholder").innerHTML = data;
-          const script = document.createElement("script");
-          script.src = "prevodi.js";
-          script.defer = true; // optional
-          document.body.appendChild(script);
-        });
-      function toggleMenu() {
-        console.log("click");
-        document.getElementById("header4").classList.toggle("active");
-      }
-    </script>
+
     <!--HEADER END-->
     <div class="content">
       <div class="uvodniTekstStoritve" id="uvodniTekstStoritve">Andrej offers deep astrological insights tailored to your life’s path. Whether you're curious about your own natal chart, your relationship dynamics, or seeking guidance in parenting, these readings provide clarity and perspective rooted in astrology.</div>
@@ -58,7 +44,6 @@
         </a>
       </div>
     </div>
-
-    <script></script>
+    <script src="prevodi.js"></script>
   </body>
 </html>

@@ -10,25 +10,12 @@
   <body>
     <!--HEADER START-->
     <div id="headerPlaceholder"></div>
-    <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("headerPlaceholder").innerHTML = data;
-          const script = document.createElement("script");
-          script.src = "prevodi.js";
-          script.defer = true; // optional
-          document.body.appendChild(script);
-        });
-      function toggleMenu() {
-        console.log("click");
-        document.getElementById("header4").classList.toggle("active");
-      }
-    </script>
+
     <!--HEADER END-->
 
     <div style="padding-top: 150px">
       <div id="kontakt">CONTACT</div>
     </div>
+    <script src="prevodi.js"></script>
   </body>
 </html>
