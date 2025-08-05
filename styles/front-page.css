@@ -21,3 +21,65 @@ body {
   padding-top: 150px;
   text-align: center;
 }
+.firstPageAppointmentButtonDiv1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.content {
+  justify-content: center; /* horizontal */
+  align-items: center;
+  max-width: 1000px;
+  font-size: 17px;
+  color: rgb(50, 50, 50);
+  padding-top: 150px;
+  text-align: center;
+}
+.naslovStoritve {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.firstPageAppointmentButton {
+  background-color: rgb(116, 144, 115);
+  color: white;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+.firstPageAppointmentButton:hover {
+  background-color: white;
+  color: rgb(116, 144, 115);
+}
+
+.bookASessionButtonDiv {
+  text-align: center;
+  padding-top: 30px;
+}
+.bookASessionButton {
+  background-color: rgb(116, 144, 115);
+  color: white;
+  margin: 5px;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+.bookASessionButton:hover {
+  background-color: white;
+  color: rgb(116, 144, 115);
+}
+.uvodniTekstStoritve {
+  border: solid;
+  font-weight: 600;
+  border-radius: 8px;
+  border-color: rgb(50, 50, 50);
+  padding: 20px;
+}

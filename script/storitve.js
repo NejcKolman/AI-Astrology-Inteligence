@@ -202,7 +202,9 @@ function resetDates() {
 console.log(resetDates());
 
 //final conformation button
-document.querySelector(".finalConformationButton").addEventListener("click", bookSession);
+//pošiljanje emajla
+const finalConformationButton = document.querySelector(".finalConformationButton");
+finalConformationButton.addEventListener("click", bookSession);
 
 function bookSession() {
   selectedTimeZone = document.getElementById("timezone").value;
@@ -211,9 +213,25 @@ function bookSession() {
   selectedTimeOfBirth = document.querySelector(".timeInput").value;
   selectedPlaceOfBirth = document.querySelector(".placeOfBirthInput").value;
   selectedEmail = document.querySelector(".emailAdressInput").value;
+  selectedAditionalText = document.querySelector(".aditionalInformationInput").value;
 
   if (selectedYear && selectedMonth + 1 && selectedDay && selectedTimeZone && selectedTime && selectedName && selectedDateOfBirth && selectedTimeOfBirth && selectedPlaceOfBirth && selectedEmail) {
     console.log("all clear");
+    const formData = { selectedAditionalInformation: selectedAditionalText, name: selectedName, selectedDay: selectedDay, selectedMonth: selectedMonth, selectedYear: selectedYear, selectedTime: selectedTime, selectedTimeZone: selectedTimeZone, selectedPlaceOfBirth: selectedPlaceOfBirth, selectedTimeOfBirth: selectedTimeOfBirth, userEmail: selectedEmail };
+    finalConformationButton.textContent = "BOOKING";
+    emailjs
+      .send(serviceID, templateID, formData)
+      .then(() => {
+        alert("You have succesfully booked a session.");
+      })
+      .catch((error) => {
+        console.error("nekaj je šlo narobe", error);
+      })
+      .finally(() => {
+        finalConformationButton.textContent = "BOOKED";
+        finalConformationButton.classList.add("disableDiv");
+      });
+
     document.querySelector(".finalConformationWarning").innerHTML = "";
   } else {
     document.querySelector(".finalConformationWarning").innerHTML = "Fulfill the above information";
@@ -226,3 +244,11 @@ document.querySelector(".timePicker").classList.add("disableDiv");
 document.querySelector(".personalInfoInput").classList.add("disableDiv");
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+//emajlJS konstante mojega profila
+emailjs.init({
+  publicKey: "P7sniMC3QHFYpfuBi",
+});
+
+const templateID = "template_hfek0tl";
+const serviceID = "service_5uktpvt";

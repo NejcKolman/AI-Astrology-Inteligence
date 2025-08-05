@@ -124,7 +124,8 @@
 .dateInputText,
 .timeInputText,
 .placeOfBirthInputText,
-.emailAdressInputText {
+.emailAdressInputText,
+.aditionalInformationText {
   margin-bottom: 5px;
   font-size: 20px;
 }
@@ -132,13 +133,18 @@
 .dateInput,
 .timeInput,
 .placeOfBirthInput,
-.emailAdressInput {
+.emailAdressInput,
+.aditionalInformationInput {
   margin-bottom: 5px;
   font-size: 20px;
   border-radius: 5px;
   border-width: 1px;
 }
-
+.aditionalInformationInput {
+  height: 100px;
+  width: 300px;
+  font-size: 15px;
+}
 .summaryInfo {
   padding-left: 50px;
 }
